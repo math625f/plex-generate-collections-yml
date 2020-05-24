@@ -1,0 +1,4 @@
+{
+	"TOKEN" : " < Your Plex API token goes here > ",
+	"URL" : "http://localhost:32400"
+}
