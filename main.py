@@ -11,8 +11,11 @@ args = parser.parse_args()
 
 with open('config.json') as f:
 	config = json.loads(f.read())
-
-plex = PlexServer(config['URL'], config['TOKEN'])
+try:
+	plex = PlexServer(config['URL'], config['TOKEN'])
+except:
+	print("An error occured with connecting to your plex instance. Ensure that your Plex is online, and that your config file is configured correctly")
+	exit()
 sections = plex.library.sections()
 
 def parse_all():
