@@ -1,3 +1,5 @@
 json
-urllib
+requests
 pyyaml
+PlexAPI
+tqdm
